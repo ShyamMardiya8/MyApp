@@ -1,22 +1,29 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import UserData from './components/UserData';
-import Input from './components/TextInput';
-import MultipleInput from './components/Multi';
-import List from './components/List';
-import Grid from './components/Grid';
-import SectionList1 from './components/SectionList';
-import Togggle from './components/Togggle';
-import Responsive from './components/Responsive';
+import { StyleSheet} from 'react-native';
+// import UserData from './components/UserData';
+// import Input from './components/TextInput';
+// import MultipleInput from './components/Multi';
+// import List from './components/List';
+// import Grid from './components/Grid';
+// import SectionList1 from './components/SectionList';
+// import Togggle from './components/Togggle';
+// import Responsive from './components/Responsive';
+// import { Buttons } from './components/Buttons';
+// import RadioButton from './components/RadioButton';
+// import Activity from './components/Activity';
+// import Model from './components/Model';
+// import Press from './components/Pressable';
+// import StatusBarComponent from './components/StatusBar';
+import NewComponent from './components/NewComponent';
 
 export default function App() {
-  const [show, setShow] = useState(false);
-  const [displayClear, setDisplayClear] = useState(false)
-  const [form, setForm] = useState({
-    email : "",
-    password : ""
-  })
+  // const [show, setShow] = useState(false);
+  // const [displayClear, setDisplayClear] = useState(false)
+  // const [form, setForm] = useState({
+  //   email : "",
+  //   password : ""
+  // })
 
   // useEffect(() => {
   //   if (form.email !== "" && form.password !== "") {
@@ -43,22 +50,13 @@ export default function App() {
   // }
 
   return (
-    <View style={styles.fullScreenWrapper}>
-      {/* <Text style={styles.mb_10}>Hello world</Text>
-      <Text style={styles.mb_10}>clicked total times : {count}</Text>
-      <Input styles={styles} handleOnchange={handleOnchange} value={name} handleClear={handleClear}/>
-      <UserData styles={styles} count={count} setCount={setCount} handleClick={handleClick}/>  */}
-      {/* <MultipleInput form={form} setForm={setForm} handleClick={handleClick} style={styles} show={show} displayClear={displayClear} handleClear={handleClear}/> */}
-      {/* <List /> */}
-      {/* <Grid /> */}
-      {/* <SectionList1 /> */}
-      {/* <Togggle /> */}
-      <Responsive />
-    </View> 
+    // <View style={styles.fullScreenWrapper}>
+      <NewComponent />
+    // </View> 
   );
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
@@ -73,7 +71,9 @@ const styles = StyleSheet.create({
   },
     fullScreenWrapper: {
     flex: 1,
-    flexDirection: "row"
+    alignItems: "center",
+    justifyContent: "center"
+    // flexDirection: "row"
   },
   button: {
     backgroundColor: '#007AFF',
