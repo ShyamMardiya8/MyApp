@@ -1,58 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import { StyleSheet} from 'react-native';
-// import UserData from './components/UserData';
-// import Input from './components/TextInput';
-// import MultipleInput from './components/Multi';
-// import List from './components/List';
-// import Grid from './components/Grid';
-// import SectionList1 from './components/SectionList';
-// import Togggle from './components/Togggle';
-// import Responsive from './components/Responsive';
-// import { Buttons } from './components/Buttons';
-// import RadioButton from './components/RadioButton';
-// import Activity from './components/Activity';
-// import Model from './components/Model';
-// import Press from './components/Pressable';
-// import StatusBarComponent from './components/StatusBar';
+import { StyleSheet, Text, View} from 'react-native';
 import NewComponent from './components/NewComponent';
+import Navigation from './components/Navigation';
 
 export default function App() {
-  // const [show, setShow] = useState(false);
-  // const [displayClear, setDisplayClear] = useState(false)
-  // const [form, setForm] = useState({
-  //   email : "",
-  //   password : ""
-  // })
-
-  // useEffect(() => {
-  //   if (form.email !== "" && form.password !== "") {
-  //     setDisplayClear(true)
-  //   }
-  //   else{
-  //     setDisplayClear(false)
-  //   }
-  // },[form])
-
-  // const handleClick = () => {
-  //   setShow(true)
-  //   alert(`your submit data email: ${form.email} password: ${form.password}`)
-  // };
-
-
-  // const handleClear = () => {
-  //   setForm({
-  //     email : "",
-  //     password : ""
-  //   })
-  //   setDisplayClear(false)
-  //   setShow(false)
-  // }
-
+ 
   return (
-    // <View style={styles.fullScreenWrapper}>
-      <NewComponent />
-    // </View> 
+      <Navigation />
   );
 }
 
