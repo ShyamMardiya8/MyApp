@@ -3,11 +3,14 @@ import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import NewComponent from './components/NewComponent';
 import Navigation from './components/Navigation';
+import Tab from './components/Tab';
+import TopTab from './components/TopTab';
+import Api from './components/Api';
 
 export default function App() {
  
   return (
-      <Navigation />
+        <Api />
   );
 }
 

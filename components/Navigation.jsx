@@ -5,22 +5,22 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-const Home = (props) => {
+export const Home = (props) => {
     console.warn(props.route)
-    const {name, age} = props.route.params;
+    // const {name, age} = props.route.params;
   return (
     <View style={styles.container}>
       <View style={styles.card}>
         <Text style={styles.title}>🏠 Home Screen</Text>
         <Text style={styles.subtitle}>Welcome to the Home Page</Text>
-        <Text>Get Data From About us {`page : ${name}`}</Text>
-        <Text>Get Data From About us {`age : ${age}`}</Text>
+        <Text>Get Data From About us {`page : `}</Text>
+        <Text>Get Data From About us {`age : `}</Text>
       </View>
     </View>
   );
 };
 
-const About = (props) => {
+export const About = (props) => {
     const [name, setName] = useState("")
     // const name = "anil"
   return (
