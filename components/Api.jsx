@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { StyleSheet, Text, View, ScrollView, ActivityIndicator } from 'react-native'
+import { StyleSheet, Text, View, ScrollView, ActivityIndicator, FlatList } from 'react-native'
 import axios from 'axios'
 
 const Api = () => {
@@ -24,7 +24,7 @@ const Api = () => {
 
   return (
     <View style={styles.container}>
-      {
+      {/* {
         loading ? (
           <View style={styles.loadingContainer}>
             <ActivityIndicator size="large" color="#007bff" />
@@ -32,17 +32,37 @@ const Api = () => {
           </View>
         ) : (
           <ScrollView contentContainerStyle={styles.scrollContainer}>
-            {data.map(i => (
+             {data.map(i => (
               <View style={styles.card} key={i.id}>
                 <Text style={styles.name}>
                   {i.first_name} {i.last_name}
                 </Text>
                 <Text style={styles.email}>{i.email}</Text>
               </View>
-            ))}
-          </ScrollView>
-        )
-      }
+            ))} 
+             </ScrollView>
+          )
+        } */}
+      <FlatList
+        data={data}
+        keyExtractor={(item) => item.id.toString()}
+        contentContainerStyle={styles.listContainer}
+        renderItem={({ item }) => (
+          <View style={styles.card}>
+            <Text style={styles.name}>
+              {item.first_name} {item.last_name}
+            </Text>
+            <Text style={styles.email}>{item.email}</Text>
+          </View>
+        )}
+        ListEmptyComponent={
+          !loading && (
+            <View style={styles.emptyContainer}>
+              <Text style={styles.emptyText}>No data available.</Text>
+            </View>
+          )
+        }
+      />
     </View>
   )
 }
